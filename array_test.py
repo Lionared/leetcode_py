@@ -6,10 +6,10 @@ class TestArray(unittest.TestCase):
         pass
 
     def test_twoSum(self):
-        nums = [2, 7, 11, 15]
-        target = 9
+        nums = [5,7,2,4,3,6,1]
+        target = 5
         found = twoSum(nums,target)
-        self.assertEqual(found,[2,7],"twoSum test failed!")
+        self.assertEqual(found,[2,4],"twoSum test failed!")
 
     def test_RemoveElement(self):
         array = [0,1,2,2,3,0,4,2]

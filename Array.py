@@ -14,15 +14,15 @@ def twoSum(nums, target):
     :type target: int
     :rtype: List[int]
     """
-    ret = []
-    i, j = 0,1
-    for i in range(len(nums)):
-        if nums[i] + nums[j] == target:
-            ret[0] = nums[i]
-            ret[1] = nums[j]
-            return ret
-        else:
-            j += 1
+    dict = {}
+    for index in range(len(nums)): #in python3, range = xrange
+        now = nums[index]
+        first = target - now
+        if first in dict:
+            return [dict[first],index]
+        dict[now] = index
+    else:
+        return None
 
 def RemoveElement(nums, val):
     """
