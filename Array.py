@@ -1,4 +1,28 @@
 # -*- coding: utf-8 -*-
+def twoSum(nums, target):
+    """
+    No. 1 Two Sum | easy
+	给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
+	你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+	Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+	You may assume that each input would have exactly one solution, and you may not use the same element twice.
+	Example:
+	Given nums = [2, 7, 11, 15], target = 9,
+	Because nums[0] + nums[1] = 2 + 7 = 9,
+	return [0, 1].
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    ret = []
+    i, j = 0,1
+    for i in range(len(nums)):
+        if nums[i] + nums[j] == target:
+            ret[0] = nums[i]
+            ret[1] = nums[j]
+            return ret
+        else:
+            j += 1
 
 def RemoveElement(nums, val):
     """
